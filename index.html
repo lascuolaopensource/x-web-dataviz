@@ -33,17 +33,21 @@
 
 		function render(data){
 
+			data.forEach(function(d){
+				if(d.appuntamenti.length == 0) {
+					d.finalDate = new Date(d.date)
+				} else {
+					d.finalDate = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
+				}
+			})
 			var ypos = 100;
 
-			var dateDomain = d3.extent(data, function(d,i) {
-				var date;
-				if(d.appuntamenti.length == 0) {
-					date = new Date(d.date)
-				} else {
-					date = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
+			data.sort(function(a,b) {
+				return a.finalDate - b.finalDate;
+			})
 
-				}
-				return date;
+			var dateDomain = d3.extent(data, function(d,i) {
+				return d.finalDate
 			})
 
 			console.log(dateDomain)
