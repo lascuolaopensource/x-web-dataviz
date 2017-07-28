@@ -23,10 +23,84 @@
 	<script src="https://d3js.org/d3.v4.min.js"> </script>
 
 	<script>
-		d3.json("data.json", function(data){
-			var svg = d3.select("svg");
-			var nodes = d3.selectAll()
-		})
+
+		var timeScale = d3.scaleTime().range([50, document.body.clientWidth-50])
+		var barHeightScale = d3.scaleLinear().range([0, 50]);
+
+		var svg = d3.select("svg");
+
+		d3.json("corsi-sito-lascuolaopensource.json", render)
+
+		function render(data){
+
+			var ypos = 100;
+
+			var dateDomain = d3.extent(data, function(d,i) {
+				var date;
+				if(d.appuntamenti.length == 0) {
+					date = new Date(d.date)
+				} else {
+					date = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
+
+				}
+				return date;
+			})
+
+			console.log(dateDomain)
+
+			timeScale.domain([new Date(dateDomain[0]), new Date(dateDomain[1])])
+
+			for (var i = 0; i < data.length; i++) {
+				drawCourseGraph(data[i], i)
+			}
+
+			function drawCourseGraph(course, index) {
+
+				var startDate = course.date;
+				var iscritti = course.iscritti;
+				var height = (iscritti + 1) * 1.2;
+				var group = svg.append("g")
+
+				if(course.appuntamenti.length == 0) {
+
+					group
+					.append("circle")
+					.attr("cy", ypos)
+					.attr("cx", function(d, i) {
+						return timeScale(new Date(startDate));
+					})
+					.attr("r", 5)
+					.style("fill", function(d,i){
+						return d3.hsl( index * (360/data.length), .5, .5 )
+					})
+					ypos += 10;
+
+				} else {
+
+					group
+					.selectAll("rect")
+					.data(course.appuntamenti)
+					.enter()
+					.append("rect")
+					.attr("y", ypos)
+					.attr("x", function(d, i) {
+						return timeScale(new Date(d.appuntamento));
+					})
+					.attr("width", function(d,i){
+						return d.fine - d.inizio
+					})
+					.attr("height", height)
+					.style("fill", function(d,i){
+						return d3.hsl( index * (360/data.length), .5, .5 )
+					})
+					ypos += height + 20;
+
+				}
+
+
+			}
+
+		}
 	</script>
 
 </body>
