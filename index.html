@@ -51,7 +51,7 @@
 	
 	<script>
 
-		var timeScale = d3.scaleTime().range([50, document.body.clientWidth-50])
+		var timeScale = d3.scaleTime().range([50, document.body.clientWidth*.85])
 		var barHeightScale = d3.scaleLinear().range([0, 50]);
 
 		var svg = d3.select("svg");
@@ -103,9 +103,10 @@
 
 				group
 				.append("text")
+				.attr("alignment-baseline", "hanging")
 				.text(course.title)
 				.attr("x", timeScale(course.finalDate) + 15)
-				.attr("y", ypos + 8)
+				.attr("y", ypos )
 				.style("fill", function(d,i){
 					return d3.hsl( index * (360/data.length), .5, .5 )
 				})
