@@ -7,7 +7,31 @@
 		body {
 			margin:0; 
 			padding:0; 
-			background: #1d1f21
+			background: #1d1f21;
+			font-family: sans-serif;
+			font-size:.6em;
+		}
+
+		#info {
+			font-size:.6rem;
+			position: absolute;
+			left:1rem;
+			bottom:1rem;
+			color: #ddd;
+			padding:0;
+			margin:0;
+		}
+
+		.domain{
+			stroke:rgb(100,100,100);
+		}
+		
+		.tick line{
+			stroke:rgb(100,100,100);
+		}
+		.tick text {
+
+			fill:rgb(100,100,100);
 		}
 	</style>
 </head>
@@ -18,10 +42,13 @@
 	<svg width="100%" height="100%">
 	</svg>
 
-	<div id="buttons"></div>
+	<div id="info">
+		<h1>Calendario corsi SOS</h1>
+		<p>L'altezza delle barre rappresenta il numero di iscritti mentre la larghezza la durata di ogni appuntamento.</p>
+	</div>
 
 	<script src="https://d3js.org/d3.v4.min.js"> </script>
-
+	
 	<script>
 
 		var timeScale = d3.scaleTime().range([50, document.body.clientWidth-50])
@@ -31,7 +58,10 @@
 
 		d3.json("corsi-sito-lascuolaopensource.json", render)
 
+
 		function render(data){
+
+			
 
 			data.forEach(function(d){
 				if(d.appuntamenti.length == 0) {
@@ -40,7 +70,7 @@
 					d.finalDate = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
 				}
 			})
-			var ypos = 100;
+			var ypos = 50;
 
 			data.sort(function(a,b) {
 				return a.finalDate - b.finalDate;
@@ -50,9 +80,15 @@
 				return d.finalDate
 			})
 
-			console.log(dateDomain)
-
 			timeScale.domain([new Date(dateDomain[0]), new Date(dateDomain[1])])
+
+
+			var axis = d3.axisTop(timeScale).ticks(d3.timeMonth);
+
+			svg
+			.append("g")
+			.attr("transform", "translate(0,30)")
+			.call(axis);
 
 			for (var i = 0; i < data.length; i++) {
 				drawCourseGraph(data[i], i)
@@ -65,13 +101,22 @@
 				var height = (iscritti + 1) * 1.2;
 				var group = svg.append("g")
 
+				group
+				.append("text")
+				.text(course.title)
+				.attr("x", timeScale(course.finalDate) + 15)
+				.attr("y", ypos + 8)
+				.style("fill", function(d,i){
+					return d3.hsl( index * (360/data.length), .5, .5 )
+				})
+
 				if(course.appuntamenti.length == 0) {
 
 					group
 					.append("circle")
-					.attr("cy", ypos)
+					.attr("cy", ypos + 2.5)
 					.attr("cx", function(d, i) {
-						return timeScale(new Date(startDate));
+						return timeScale(new Date(startDate))+ 2.5;
 					})
 					.attr("r", 5)
 					.style("fill", function(d,i){
