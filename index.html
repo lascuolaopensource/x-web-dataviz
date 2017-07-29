@@ -33,13 +33,26 @@
 
 			fill:rgb(100,100,100);
 		}
+
+		.axisSvg {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		#info {
+			position: fixed;
+			bottom: 0;
+		}
+
+
 	</style>
 </head>
 
 <body>
 
 
-	<svg width="100%" height="100%">
+	<svg width="100%" >
 	</svg>
 
 	<div id="info">
@@ -51,104 +64,188 @@
 	
 	<script>
 
-		var timeScale = d3.scaleTime().range([50, document.body.clientWidth*.85])
-		var barHeightScale = d3.scaleLinear().range([0, 50]);
+		var padding = 40;
+		var timeScale = d3.scaleTime();
+		// aggiungiamo l'asse temporale
+		var axis = d3.axisTop(timeScale).ticks(d3.timeMonth);
+		var axisSvg;
+
+		var barHeightScale = d3.scaleLinear().domain([0,100])
+
+		// TODO calcolare l'altezza massima
+		barHeightScale.range([10, 100])
+
+		var totalHeight;
+
+		var margin = window.innerHeight*.05;
 
 		var svg = d3.select("svg");
+		var data;
 
-		d3.json("corsi-sito-lascuolaopensource.json", render)
+
+		d3.json("data.json", start)
 
 
-		function render(data){
+		function start(loadedData) {
 
-			
+
+			// puliamo i dati
+			data = loadedData;
+
+			data = data.filter(function(d){ return d.appuntamenti.length >0})
+
 
 			data.forEach(function(d){
 				if(d.appuntamenti.length == 0) {
 					d.finalDate = new Date(d.date)
 				} else {
+					d.startDate = new Date(d.appuntamenti[0].appuntamento)
 					d.finalDate = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
 				}
 			})
-			var ypos = 50;
 
 			data.sort(function(a,b) {
-				return a.finalDate - b.finalDate;
+				return a.startDate - b.startDate;
 			})
+
+			// ridimensionamo l'svg 
+			totalHeight = data.length * (barHeightScale.range()[1] + padding) + 100
+			svg.attr("height", totalHeight)
+			
+
+
+			 axisSvg = d3.select(document.body).append("svg").attr("class", "axisSvg")
+
+
+			axisSvg
+			.append("g")
+			.attr("class", "axis")
+			.attr("transform", "translate(0,30)")
+
+
+			// ridisegna on resize
+			window.onresize =  function() {
+				render();
+			}
+			
+			// TODO disegna due volte perche la prima ggiunge e la seconda riposiizion
+			render()
+			render()
+
+		}
+
+
+
+		function render(){
+			
+
+			
+			var wWidth = window.document.body.clientWidth;
+			var wHeight = totalHeight;
+			var ypos = 100;
 
 			var dateDomain = d3.extent(data, function(d,i) {
 				return d.finalDate
 			})
 
-			timeScale.domain([new Date(dateDomain[0]), new Date(dateDomain[1])])
-
-
-			var axis = d3.axisTop(timeScale).ticks(d3.timeMonth);
-
-			svg
-			.append("g")
-			.attr("transform", "translate(0,30)")
+			// ridisegna assetemporale
+			axisSvg
+			.select(".axis")
 			.call(axis);
 
-			for (var i = 0; i < data.length; i++) {
-				drawCourseGraph(data[i], i)
-			}
 
-			function drawCourseGraph(course, index) {
+			timeScale.domain([new Date(data[0].startDate), new Date(dateDomain[1])])
+			timeScale.range([wWidth*.1, wWidth*.9])
 
-				var startDate = course.date;
-				var iscritti = course.iscritti;
-				var height = (iscritti + 1) * 1.2;
-				var group = svg.append("g")
 
-				group
+			var dayWidth = timeScale(new Date("2017-01-18"))-timeScale.range()[0];
+
+			var groups = svg
+			.selectAll(".appuntamenti")
+			.data(data)
+
+
+			groups
+			.style("transform", function(d, i){
+				var myPos = "translate(0, "+ Math.round(ypos) +"px)";
+				ypos += barHeightScale(d.iscritti) + padding;
+				return myPos;
+			})
+
+
+			var enteringGrooups = groups
+			.enter()
+			.append("g")
+			.attr("class", "appuntamenti")
+			.each(function(course) {
+
+				var tema = course.area_tema;
+
+				d3.select(this)
 				.append("text")
 				.attr("alignment-baseline", "hanging")
 				.text(course.title)
 				.attr("x", timeScale(course.finalDate) + 15)
-				.attr("y", ypos )
 				.style("fill", function(d,i){
-					return d3.hsl( index * (360/data.length), .5, .5 )
+					if(tema == "x_comunicazione") {
+						return "green";
+					}
+					else if (tema == "y_strumenti"){
+						return "red";
+
+					}
+					else {
+						return "blue";
+					}
 				})
 
-				if(course.appuntamenti.length == 0) {
+				d3.select(this)
+				.selectAll("rect")
+				.data(course.appuntamenti)
+				.enter()
+				.append("rect")
+				.each(function(d,i){
+					d.iscritti = course.iscritti
+				})
+				.style("fill", function(d,i){
+					if(tema == "x_comunicazione") {
+						return "green";
+					}
+					else if (tema == "y_strumenti"){
+						return "red";
 
-					group
-					.append("circle")
-					.attr("cy", ypos + 2.5)
-					.attr("cx", function(d, i) {
-						return timeScale(new Date(startDate))+ 2.5;
-					})
-					.attr("r", 5)
-					.style("fill", function(d,i){
-						return d3.hsl( index * (360/data.length), .5, .5 )
-					})
-					ypos += 10;
-
-				} else {
-
-					group
-					.selectAll("rect")
-					.data(course.appuntamenti)
-					.enter()
-					.append("rect")
-					.attr("y", ypos)
-					.attr("x", function(d, i) {
-						return timeScale(new Date(d.appuntamento));
-					})
-					.attr("width", function(d,i){
-						return d.fine - d.inizio
-					})
-					.attr("height", height)
-					.style("fill", function(d,i){
-						return d3.hsl( index * (360/data.length), .5, .5 )
-					})
-					ypos += height + 20;
-
-				}
+					}
+					else {
+						return "blue";
+					}
+				})
 
 
-			}
+
+			})
+
+
+			
+			groups
+			.selectAll("text")
+			.attr("x", function(d, i) {
+				return timeScale(d.finalDate) + 15
+			})
+
+
+
+			groups
+			.selectAll("rect")
+			.attr("x", function(d, i) {
+				return timeScale(new Date(d.appuntamento));
+			})
+			
+			.attr("height", function(d,i) {
+				return barHeightScale(d.iscritti)
+			})
+			.attr("width", dayWidth)
+
+
 
 		}
 	</script>
