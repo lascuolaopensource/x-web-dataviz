@@ -8,15 +8,38 @@
 		@font-face {
 
 			font-family: 'FREAKGrotesk-next';
-			src: url('webfonts/FREAKGrotesk-next.ttf') format('truetype');
+			src: url('webfonts/FREAKGrotesk-next.ttf') format('truetype'),
+				url('webfonts/FREAKGrotesk-next.eot'),
+				url('webfonts/FREAKGrotesk-next.woff') format('woff');
 		}
+
+
+		@font-face {
+			font-family: 'HKGrotesk-Light';
+			src: url('webfonts/HKGrotesk-Light.woff') format('woff');
+
+		}
+
+		@font-face {
+			font-family: 'HKGrotesk-Medium';
+			src: url('webfonts/HKGrotesk-Medium.woff') format('woff');
+
+		}
+
+		@font-face {
+			font-family: 'HKGrotesk-Regular';
+			src: url('webfonts/HKGrotesk-Regular.woff') format('woff');
+
+		}
+
+
 		body {
 			width: auto;
 			margin:0; 
 			padding:0; 
 			background: #1d1f21;
-			font-family: "FREAKGrotesk-next";
-			font-size:.6em;
+			font-family: "HKGrotesk-Light";
+			font-size:.7em;
 		}
 
 		#info {
@@ -37,8 +60,8 @@
 			stroke:rgb(100,100,100);
 		}
 		.tick text {
-
-			fill:rgb(100,100,100);
+			font-family: "HKGrotesk-Light";
+			fill:rgb(255,255,255);
 		}
 
 		.axisSvg {
@@ -48,6 +71,7 @@
 			top: 0;
 			width: 100%;
 			pointer-events:none;
+
 		}
 
 		svg {
@@ -66,10 +90,19 @@
 		}
 
 		#select {
-			position: absolute;
+			position: fixed;
 			right: 1rem;
 			top: 1rem;
 			z-index:2;
+			padding: 5px 8px;
+    	
+   			 border: none;
+   			 box-shadow: none;
+    background-color: white;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 		}
 
 

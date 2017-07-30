@@ -1,0 +1,910 @@
+[
+   {
+      "tipo":"corso",
+      "title":"Communication Design",
+     "area_tema":"x_comunicazione",
+      "data":"2016-11-17",
+      "ore_appuntamento":"6",
+      "ore_totali":"36",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-01-16",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-01-30",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-02-13",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-02-27",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-03-13",
+            "inizio":"10.00",
+            "fine":"18.00"
+         }
+      ],
+      "differenza_giorni":14,
+      "numero_appuntamenti":5,
+      "docenti":[
+         {
+            "nome":"Alessandro Tartaglia",
+            "professione":"Designer",
+            "organizzazione":"FF3300 \/ CAST \/ SOS",
+            "foto":"3.jpg",
+            "bio":"Born in Foggia in 1983, Alessandro graduated in Industrial Design (Poliba) and specialized in Editorial and Graphic Systems Charts (ISIA Urbino). In addition, he is the co-founder of FF3300, CAST and La Scuola Opensource. His work is focused on the process as a whole. Over time he has deepened the study of typography, linguistics, network theory and memetics. He works with human beings and with the communities they create."
+         }
+      ],
+      "date":"2016-11-24",
+      "numero_docenti":1,
+      "tags":[
+         "branding",
+         "typography",
+         "publishing",
+         "web"
+      ],
+      "iscritti":"30",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Political Communication",
+     "area_tema":"z_processi",
+      "data":"2017-02-15",
+      "ore_appuntamento":"8",
+      "ore_totali":"16",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-02-15",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-02-16",
+            "inizio":"10.00",
+            "fine":"18.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Eugenio Iorio",
+            "professione":"Communication Strategist",
+            "organizzazione":"AREACOM43  \/ Imaginifica",
+            "foto":"",
+            "bio":"In the 90s he was media activist and hacker. He was involved in information warfare and manipulation techniques of perception. Specialized in political communication and electoral marketing, he curated fifty electoral campaigns from 1993 to 2013, he has been a trainer and consultant for several Italian parties and the European Socialist Party. Teacher (2006-2012) at the University of Bari (UNIBA), from 2010 he now teaches, in Naples, at Suor Orsola Benincasa and at Link Campus University since 2015. Storytelling  and imaginary construction methods expert; he was director of corporate communications in Puglia from 2006 to 2011, receiving 10 national awards. He is chairman of the scientific committee of Democracies Digital Research Centre. In 2014 he won the ISTAT contest and GOOGLE \"Producing Official Statistics with Big Data.\""
+         },
+         {
+            "nome":"Alessandro Tartaglia",
+            "professione":"Communication Designer",
+            "organizzazione":"FF3300 \/ CAST \/ SOS",
+            "foto":"",
+            "bio":"Born in Foggia on August 18th, 1983. He studies Industrial Design in Bari Polytechnic University and Editing & Graphic System in Urbino ISIA. He co-founds FF3300 studio, digital typography foundry CAST and La Scuola Open Source. With time, he deepens his studies of the theory of networks, memetics and process design. He works with human beings and the communities they form."
+         }
+      ],
+      "date":"2016-12-23",
+      "numero_docenti":2,
+      "tags":[
+         "strategy",
+         "press office",
+         "social media",
+         "project management",
+         "design"
+      ],
+      "iscritti":"12",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Service and Process Design",
+     "area_tema":"z_processi",
+      "data":"2017-01-26",
+      "ore_appuntamento":"8",
+      "ore_totali":"16",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-01-26",
+            "inizio":"9.30",
+            "fine":"18.30"
+         },
+         {
+            "appuntamento":"2017-01-27",
+            "inizio":"9.30",
+            "fine":"18.30"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Guglielmo Apolloni",
+            "professione":"Designer and social proto-entrepreneur",
+            "organizzazione":"Social Seed \/ School Raising",
+            "foto":"",
+            "bio":"He\u2019s a designer and a social proto-entrepreneur. He co-founded Raising School, the first Italian crowdfunding platform to finance school projects, and Mitosis, a randomly directed co-working in Berlin. As a designer, he works in Italy with Social Seed and in Europe with Somos M\u00e1s - global agency specializing on the collective intelligence enhancement. In every experience, his approach combines four words: #diffuse #creativity #design #thinking"
+         }
+      ],
+      "date":"2016-12-23",
+      "numero_docenti":1,
+      "tags":[
+         "design",
+         "services",
+         "processes",
+         "social innovation",
+         "canvas"
+      ],
+      "iscritti":"17",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Euro-planning",
+     "area_tema":"z_processi",
+      "data":"2017-01-24",
+      "ore_appuntamento":"6",
+      "ore_totali":"24",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-04",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-07-05",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-07-06",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-07-07",
+            "inizio":"10.00",
+            "fine":"18.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":4,
+      "docenti":[
+         {
+            "nome":"Ilda Curti",
+            "professione":"Social innovator",
+            "organizzazione":"Associazione IUR",
+            "foto":"",
+            "bio":"Expert in Europlanning, management and administration of complex programs. Teacher, trainer and consultant on EU policies, local development, urban regeneration and integration policies, cultural planning advisor, she has conducted research in Italy and abroad. From 2006 to 2016 she has been Council Member of the City of Turin with mandates on urban regeneration, integration policies, Equal Opportunities and Rights, Urban Design and Public Soil, community programs."
+         }
+      ],
+      "date":"2016-12-23",
+      "numero_docenti":1,
+      "tags":[
+         "calls for tenders",
+         "texts drafting",
+         "project management",
+         "business modeling",
+         "social innovation"
+      ],
+      "iscritti":"0",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Electronic Prototyping",
+     "area_tema":"y_strumenti",
+      "data":"2017-01-10",
+      "ore_appuntamento":"4",
+      "ore_totali":"30",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-01-14",
+            "inizio":"10.30",
+            "fine":"12.30"
+         },
+         {
+            "appuntamento":"2017-01-21",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-01-28",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-02-04",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-02-11",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-02-18",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-02-25",
+            "inizio":"9.00",
+            "fine":"13.00"
+         },
+         {
+            "appuntamento":"2017-03-04",
+            "inizio":"9.00",
+            "fine":"13.00"
+         }
+      ],
+      "differenza_giorni":6,
+      "numero_appuntamenti":8,
+      "docenti":[
+         {
+            "nome":"Piero Boccadoro",
+            "professione":"Researcher",
+            "organizzazione":"Politechinc University Of Bari",
+            "foto":"",
+            "bio":"Under the motto \u201cfly only those who dare to do it\" Piero is a passionate student and a curious geek. It begins like many, dismantling pc, he then get passionate about electronics and programming. Today he\u2019s a designer and maker with many models to strive for. Diverse work experience: from IT consulting up to web contents editing passing by the implementation of Open Source projects, training, education and more. After working in the neuroscience field as electronic designer now he does research for Bari Polytechnic."
+         },
+         {
+            "nome":"Aurelio Carella",
+            "professione":"Almost electronics engineer",
+            "organizzazione":"BariMakers",
+            "foto":"",
+            "bio":"He brings his passion for OpenSource also in his work for the triennial degree thesis in Electronic Measurements, designing ashield for Arduino that allows the remote use of a lab reflectometer. Associated with BariMakers, in recent years he participated in events such as the Innovation Festival and the Makers Meeting, organizing and taking Arduino and electronic prototyping worshops."
+         }
+      ],
+      "date":"2016-12-23",
+      "numero_docenti":2,
+      "tags":[
+         "arduino",
+         "making",
+         "interaction design",
+         "electronics",
+         "digital crafts",
+         "do it yourself"
+      ],
+      "iscritti":"12",
+      "output":"technology, services, products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Serigraphy printing",
+     "area_tema":"x_comunicazione",
+      "data":"2017-01-09",
+      "ore_appuntamento":"6",
+      "ore_totali":"18",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-01-23",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-01-24",
+            "inizio":"10.00",
+            "fine":"18.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Mario Nardulli",
+            "professione":"Artist e Serigrapher",
+            "organizzazione":"Pigment Workroom",
+            "foto":"",
+            "bio":"Mario Nardulli, born in Bari in 1986, is co-founder of Pigment Workroom, their goal is to represent and promote young artists, illustrators and designers who are talented in their style and content. To do so, they promote urban participated art events since 2010, capable of providing a new aesthetic dimension to peripheral areas of the city, directly involving residents in the creative process. He has been interested in urban art since his young age, designing and curating various interventions in public spaces and not only."
+         },
+         {
+            "nome":"Alessandro Moretti",
+            "professione":"Techincal Assistant",
+            "organizzazione":"Pigment Workroom",
+            "foto":"",
+            "bio":"Alessandro Moretti is part of Pigment Workroom, a multidisciplinary art print studio born and based in Bari. Their goal is to represent and promote young artists, illustrators and designers who are talented in their style and content. To do so, they promote urban participated art events since 2010, capable of providing a new aesthetic dimension to peripheral areas of the city, directly involving residents in the creative process."
+         }
+      ],
+      "date":"2016-12-23",
+      "numero_docenti":2,
+      "tags":[
+         "serigraphy",
+         "xylography",
+         "graphics",
+         "print",
+         "etching"
+      ],
+      "iscritti":"6",
+      "output":"products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Interactive Data Visualization",
+     "area_tema":"y_strumenti",
+      "data":"2017-03-17",
+      "ore_appuntamento":"4",
+      "ore_totali":"12",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-03-17",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-03-18",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-03-19",
+            "inizio":"15.00",
+            "fine":"19.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":3,
+      "docenti":[
+         {
+            "nome":"Puria Nafisi",
+            "professione":"Interaction Designer \/ Data Scientist",
+            "organizzazione":"AXANT",
+            "foto":"",
+            "bio":"Digital Rights and Free Software hacktivist since always, Puria started AXANT to ban those bad patterns learned and experienced in fortune 200 companies. Deep technical background and a curious hackish attitude helps him to be a smart problem solver and a great question\nmaker! Already mentor of past editions of the SWE, works daily with a lot of startups to validate business ideas and create effective MVPs.\n\n**Expertise:** Rapid prototyping, Customer Validation, Technical feasibility, Business Intelligence"
+         }
+      ],
+      "date":"2017-03-15",
+      "numero_docenti":1,
+      "tags":[
+         "playing",
+         "js",
+         "javascript",
+         "d3",
+         "d3.js",
+         "dataviz",
+         "data visualization",
+         "coding",
+         "data"
+      ],
+      "iscritti":"14",
+      "output":"services, products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Basic Design e metodologia progettuale",
+     "area_tema":"x_comunicazione",
+      "data":"2017-04-28",
+      "ore_appuntamento":"4",
+      "ore_totali":"24",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-04-28",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-04-29",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-04-30",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-05-12",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-05-13",
+            "inizio":"15.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-05-14",
+            "inizio":"15.00",
+            "fine":"19.00"
+         }
+      ],
+      "differenza_giorni":12,
+      "numero_appuntamenti":6,
+      "docenti":[
+         {
+            "nome":"Giovanni Anceschi",
+            "professione":"Artist, Designer, Teacher",
+            "organizzazione":"Gruppo T",
+            "foto":"",
+            "bio":"He is quite an unusual character on the design scene: starting from 1960s he developed his activity in several fields, all connected by his interest towards a style of communication and experimentation that finds its main dimension in temporality, using the most advanced technologies and standing for an ethical and political approach to design.\n\nAs an artist, he was amongst the founders of the Kinetic and Programmed Art (an art that was metamorphic, immersive and interactive already in the Sixties).\n\nAs a designer, he developed large coordinated branding and exhibition design projects, and some pioneering examples of multimedia, hypermedia and interaction design.\n\nAs a teacher, after having been the first professor lecturing on communication project - related subjects in the Italian University, he has been doing that for over 30 years.\n\nAs a criticist, historian and scholar of communication project discipline, he has published books and contributed to several publications, in Italy and abroad.\n\nHe the responsible of the introduction in the design discourse of notions as \u201cmonogram\u201d, \u201ccommunication artifact\u201d, \u201cprothetic theory of objects\u201d, \u201chard and soft coordinate image\u201d, \u201celectronic anaphore\u201d, \u201ccities interface\u201d and \u201ccare of transitions\u201d.\n\nHe works on a project around reviewing the communication design discipline in terms of transition from the tactical artifact project discipline to the strategic discipline of the \u201ctheory of staging\u201d, then \u201cmulti-modal staging\u201d."
+         }
+      ],
+      "date":"2017-03-25",
+      "numero_docenti":1,
+      "tags":[
+         "basic design",
+         "pedagogy",
+         "learning by doing",
+         "bauhaus",
+         "gestalt"
+      ],
+      "iscritti":"19",
+      "output":"skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Type\u2014Design Starter Kit: the suprematist process",
+     "area_tema":"x_comunicazione",
+      "data":"2017-04-21",
+      "ore_appuntamento":"6",
+      "ore_totali":"30",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-04-21",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-04-22",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-04-23",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-04-24",
+            "inizio":"10.00",
+            "fine":"18.00"
+         },
+         {
+            "appuntamento":"2017-04-25",
+            "inizio":"10.00",
+            "fine":"18.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":5,
+      "docenti":[
+         {
+            "nome":"Luciano Perondi",
+            "professione":"Type Designer",
+            "organizzazione":"ISIA di Urbino \/ CAST \/ ALPACA",
+            "foto":"",
+            "bio":"Designer of typefaces and graphic professional since 1998, he operates in the field of graphic design aspects related to writing (body types or not) and information design. He designed several typefaces for newspapers, books and videos, signage and identity systems. In addition to the activity of designer he also deals with graphics theoretical aspects. Since 2004 he\u2019s been involved in typography and information design teaching at various institutions, including IED in Milan, the Polytechnic School of Design, Fine Arts Academy of Urbino and Bari Polytechnic. Since 2007 he is lecturer at ISIA of Urbino, where he was director of studies in the 2013-16 triennium."
+         },
+         {
+            "nome":"Alessio D'Ellena",
+            "professione":"Type Designer",
+            "organizzazione":"CAST \/ Accademia di Belle Arti di Urbino",
+            "foto":"",
+            "bio":"1985, Rome. Type-designers and graphic designers. He received his \"TypeMedia\" Master at KABK, Fine Arts Academy of The Hague in 2016. He previously graduated in \"Communication, Design and Publishing\u201d at ISIA of Urbino. Member of the Digital Foundry Cast, he\u2019s been Type Design and Lettering teacher from 2013 to 2015 at Fine Arts Academy of Urbino. He received the TDC \"Certificate of Typographic Excellence\" for the font family \"Laica\" in 2017."
+         }
+      ],
+      "date":"2017-03-25",
+      "numero_docenti":2,
+      "tags":[
+         "lettering",
+         "font",
+         "typefaces",
+         "design",
+         "typography"
+      ],
+      "iscritti":"28",
+      "output":"products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Visual Studies",
+     "area_tema":"x_comunicazione",
+      "data":"2017-05-19",
+      "ore_appuntamento":"4",
+      "ore_totali":"24",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-05-19",
+            "inizio":"11.00",
+            "fine":"17.00"
+         },
+         {
+            "appuntamento":"2017-05-20",
+            "inizio":"11.00",
+            "fine":"17.00"
+         },
+         {
+            "appuntamento":"2017-05-21",
+            "inizio":"11.00",
+            "fine":"17.00"
+         },
+         {
+            "appuntamento":"2017-05-26",
+            "inizio":"11.00",
+            "fine":"17.00"
+         },
+         {
+            "appuntamento":"2017-05-28",
+            "inizio":"11.00",
+            "fine":"17.00"
+         },
+         {
+            "appuntamento":"2017-05-27",
+            "inizio":"11.00",
+            "fine":"17.00"
+         }
+      ],
+      "differenza_giorni":5,
+      "numero_appuntamenti":6,
+      "docenti":[
+         {
+            "nome":"Tommaso Guariento",
+            "professione":"Researcher",
+            "organizzazione":"Sorbone of Paris University",
+            "foto":"",
+            "bio":"Tommaso Guariento (Padova 1985) studied contemporary philosophy at the University of Padua and at Paris 1 - Panth\u00e9on Sorbonne. He is a PhD in European Cultural Studies at the University of Palermo. He\u2019s carried out researches in the field of contemporary French anthropology at the Ecole des Hautes Etudes en Sciences Sociales under the guidance of professor Carlo Severi. He has written various articles and collaborated on collective works in the field of visual studies, philosophy and contemporary anthropology. He writes for several online magazines, including Prismo, Effimera, L\u2019indiscreto and Il Lavoro Culturale. His recent researches concern the relationships between ethnographic studies and philosophy, the study of contemporary mythologies through the tools cognitive and cultural anthropology, and post-working man and accelerationist political philosophy. Among his recent publications: \u201cMacchina gnostica, macchina orfica: decostruzione e montaggio delle ideologie\u201d (Tricontre, 2015) and \u201cLe rovine del tempo. Catastrofi, previsione, Singolarit\u00e0 e Realismo Speculativo: dalla crisi dell\u2019immaginario all\u2019immaginario della crisi\u201d (Lo Sguardo, 2016)."
+         }
+      ],
+      "date":"2017-03-26",
+      "numero_docenti":1,
+      "tags":[
+         "visual studies",
+         "antropology",
+         "iconography",
+         "memetics"
+      ],
+      "iscritti":"9",
+      "output":"skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Modular Fashion",
+     "area_tema":"y_strumenti",
+      "data":"2017-06-30",
+      "ore_appuntamento":"8",
+      "ore_totali":"16",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-06-30",
+            "inizio":"9.30",
+            "fine":"18.30"
+         },
+         {
+            "appuntamento":"2017-07-01",
+            "inizio":"9.30",
+            "fine":"18.30"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Zoe Romano",
+            "professione":"Craftivist, digital strategist e lecturer",
+            "organizzazione":"Wemake",
+            "foto":"",
+            "bio":"Co-founder of WeMake \u2013 makerspace and fablab in Milan since 2014 \u2013 she graduated in philosophy and formed in the world of digital communication strategy. Since the '00s she has investigated the boundaries and potentialities of open source in fashion and design in various projects by interweaving them with digital manufacturing. From 2013 to 2017 she worked for Arduino, dealing with digital strategy."
+         }
+      ],
+      "date":"2017-06-01",
+      "numero_docenti":1,
+      "tags":[
+         "fashion",
+         "making",
+         "modular",
+         "prototyping",
+         "laser",
+         "cutting"
+      ],
+      "iscritti":"0",
+      "output":"technologies, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"BYO Hackintosh",
+      "area_tema":"y_strumenti",
+      "data":"2017-06-22",
+      "ore_appuntamento":"6",
+      "ore_totali":"18",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-06-22",
+            "inizio":"10.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-06-23",
+            "inizio":"10.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-06-24",
+            "inizio":"10.00",
+            "fine":"19.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":3,
+      "docenti":[
+         {
+            "nome":"Alessandro Balena",
+            "professione":"Hacker, maker, film-maker",
+            "organizzazione":"La Scuola Open Source, Dinamo Film",
+            "foto":"",
+            "bio":"Cinema worker by profession, self-taught maker by vocation. He cooperates with Dinamo Film, where he cares about innovation within videomaking processes, and with FF3300 studio for interaction-based projects and research. In 2014 he is the project manager for the \u201cY - a variable seeking for identity\u201d workshop, from which in 2016 La Scuola Open Source was born, with him as co-founder."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":1,
+      "tags":[
+         "DIY",
+         "hacking",
+         "osx86",
+         "mac",
+         "hardware"
+      ],
+      "iscritti":"0",
+      "output":"products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"BYO Robotic Bartender",
+     "area_tema":"y_strumenti",
+      "data":"2017-07-13",
+      "ore_appuntamento":"6",
+      "ore_totali":"18",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-13",
+            "inizio":"10.30",
+            "fine":"17.30"
+         },
+         {
+            "appuntamento":"2017-07-14",
+            "inizio":"10.30",
+            "fine":"17.30"
+         },
+         {
+            "appuntamento":"2017-07-15",
+            "inizio":"10.30",
+            "fine":"17.30"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":3,
+      "docenti":[
+         {
+            "nome":"Alessandro Balena",
+            "professione":"Hacker, maker, film-maker",
+            "organizzazione":"La Scuola Open Source, Dinamo Film",
+            "foto":"",
+            "bio":"Cinema worker by profession, self-taught maker by vocation. He cooperates with Dinamo Film, where he cares about innovation within videomaking processes, and with FF3300 studio for interaction-based projects and research. In 2014 he is the project manager for the \u201cY - a variable seeking for identity\u201d workshop, from which in 2016 La Scuola Open Source was born, with him as co-founder."
+         },
+         {
+            "nome":"Nicol\u00f2 Loprieno",
+            "professione":"Designer",
+            "organizzazione":"FF3300 \/ La Scuola Open Source",
+            "foto":"",
+            "bio":"Born in Bari on July 4th, 1983. He studies Industrial Design in Bari Polytechnic University and Communication Design in Venice IUAV. Co-founder of FF3300 Studio and La Scuola Open Source. With time he specialized in graffiti and street-art techniques, which led him to embrace the motto \u201cworks are better when shared\u201d."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":2,
+      "tags":[
+         "DIY",
+         "arduino",
+         "robot",
+         "making",
+         "digital handicraft"
+      ],
+      "iscritti":"18",
+      "output":"products, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Hacking Types \u2014 Meaning effects",
+     "area_tema":"x_comunicazione",
+      "data":"2017-07-08",
+      "ore_appuntamento":"8",
+      "ore_totali":"16",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-08",
+            "inizio":"10.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-07-09",
+            "inizio":"10.00",
+            "fine":"19.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Alessandro Tartaglia",
+            "professione":"Designer",
+            "organizzazione":"FF3300 \/ CAST \/ SOS",
+            "foto":"",
+            "bio":"Born in Foggia on August 18th, 1983. He studies Industrial Design in Bari Polytechnic University and Editing & Graphic System in Urbino ISIA. He co-founds FF3300 studio, digital typography foundry CAST and La Scuola Open Source. With time, he deepens his studies of the theory of networks, memetics and process design. He works with human beings and the communities they form."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":1,
+      "tags":[
+         "hacking",
+         "design",
+         "typefaces",
+         "semiotics",
+         "typography",
+         "communication"
+      ],
+      "iscritti":"0",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"LabGov \u2014 Urban Co-Design",
+     "area_tema":"z_processi",
+      "data":"2017-07-14",
+      "ore_appuntamento":"8",
+      "ore_totali":"16",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-14",
+            "inizio":"9.30",
+            "fine":"18.30"
+         },
+         {
+            "appuntamento":"2017-07-15",
+            "inizio":"9.30",
+            "fine":"18.30"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":2,
+      "docenti":[
+         {
+            "nome":"Chiara De Angelis",
+            "professione":"Project Manager",
+            "organizzazione":"LabGov",
+            "foto":"",
+            "bio":"Project manager di LabGov, svolge attivit\u00e0 di ricerca in innovazione democratica e si sta specializzando in architettura dell\u2019informazione e UX design commons-oriented\n\nLabGov's Project Manager, she conducts research in democratic innovation and is specializing in information architecture and UX commons-oriented design."
+         },
+         {
+            "nome":"Chiara Prevete",
+            "professione":"Avvocato",
+            "organizzazione":"LabGov",
+            "foto":"",
+            "bio":"Avvocato specializzato in diritto ambientale. Svolge altres\u00ec attivit\u00e0 di ricerca sugli strumenti giuridici di governance amministrazione urbana in LabGov, di cui \u00e8 direttore esecutivo.\n\nLawyer specialized in environmental law. She also carries out research activities on the legal instruments of urban governance at LabGov, of which she's Executive Director."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":2,
+      "tags":[
+         "governance",
+         "commons",
+         "cooperation",
+         "innovation",
+         "co-design",
+         "participation"
+      ],
+      "iscritti":"0",
+      "output":"skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Near Future Design Workshop",
+     "area_tema":"z_processi",
+      "data":"2017-07-20",
+      "ore_appuntamento":"8",
+      "ore_totali":"24",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-20",
+            "inizio":"9.30",
+            "fine":"18.30"
+         },
+         {
+            "appuntamento":"2017-07-21",
+            "inizio":"9.30",
+            "fine":"18.30"
+         },
+         {
+            "appuntamento":"2017-07-22",
+            "inizio":"9.30",
+            "fine":"18.30"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":3,
+      "docenti":[
+         {
+            "nome":"Giacomo Equizi",
+            "professione":"Designer",
+            "organizzazione":"Nefula",
+            "foto":"",
+            "bio":"Graduated in communications design in 2016, he works in the field of graphics and communication. In 2015, he is co-founder of Nefula, a studio that applies the Near Future Design methodology to explore scenarios for possible futures in different areas."
+         },
+         {
+            "nome":"Rudy Faletra",
+            "professione":"Designer",
+            "organizzazione":"Nefula",
+            "foto":"",
+            "bio":"Product designer expert in modeling, prototyping and production processes. Interested in the relationship between innovation, technology and social dynamics, he works as a motion designer and 3D artist. Since 2015 he is co-founder of Nefula where he applies his skills in the speculation of future scenarios."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":2,
+      "tags":[
+         "transmedia",
+         "fiction",
+         "near future",
+         "speculative",
+         "design",
+         "future"
+      ],
+      "iscritti":"0",
+      "output":"services, skills"
+   },
+   {
+      "tipo":"corso",
+      "title":"Sound Art systems & technologies",
+     "area_tema":"y_strumenti",
+      "data":"2017-07-02",
+      "ore_appuntamento":"8",
+      "ore_totali":"24",
+      "appuntamenti":[
+         {
+            "appuntamento":"2017-07-02",
+            "inizio":"10.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-07-03",
+            "inizio":"10.00",
+            "fine":"19.00"
+         },
+         {
+            "appuntamento":"2017-07-04",
+            "inizio":"10.00",
+            "fine":"19.00"
+         }
+      ],
+      "differenza_giorni":1,
+      "numero_appuntamenti":3,
+      "docenti":[
+         {
+            "nome":"Roberto Pugliese",
+            "professione":"Artist e Professor",
+            "organizzazione":"Niccol\u00f2 Piccini Conservatory of Bari",
+            "foto":"",
+            "bio":"Roberto Pugliese was born in Naples, Italy in 1982. In 2008 he graduated from the Conservatory of San Pietro a Majella (Naples, Italy), where he studied electronic music and developed his first strategies for visualizing the dynamics of sound. Immediately after his graduation, he participated in various group exhibitions in Italy and abroad including the Second Biennale of Young Art, Academy of Fine Arts, Bologna, curated by Renato Barilli (2008), the Condotti cronoarmonici, Galerie Mario Mazzoli, Berlin (2010) and the Los Maquinistas, c arte c Museum, Madrid (2013) among others. Since 2009, Pugliese\u2019s work has been featured in numerous solo exhibitions in Italy, Spain, Germany and the U.S.A. (2014, Concerto per natura morta, Muse, Trento| 2013, Emergenze acustiche, Tenuta dello Scompiglio, Vorno, Capannori ( Lucca )| 2012, Gervasuti Mix, omaggio a Cage, Gervasuti Foundation, Venice | 2012, Volta NY, New York | 2011 Unexpected Machines, Galerie Mario Mazzoli, Berlin). He has received awards, including an honourable mention at the 2013 Ars electronica, Linz and a special mention at the 2012 Vida 14, Telefonica Fundaci\u00f2n, Madrid."
+         }
+      ],
+      "date":"2017-06-16",
+      "numero_docenti":1,
+      "tags":[
+         "sound art",
+         "installazioni",
+         "making",
+         "sculture",
+         "interaction design",
+         "max\/msp",
+         "puredata",
+         "art"
+      ],
+      "iscritti":"0",
+      "output":"technologies, services, products, skills"
+   }
+]
