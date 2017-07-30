@@ -1,366 +1,410 @@
-
 <html>
 
 <head>
-	<title>d3 sos</title>
-	<style> 
+    <title>d3 sos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    @font-face {
 
-		@font-face {
-
-			font-family: 'FREAKGrotesk-next';
-			src: url('webfonts/FREAKGrotesk-next.ttf') format('truetype'),
-				url('webfonts/FREAKGrotesk-next.eot'),
-				url('webfonts/FREAKGrotesk-next.woff') format('woff');
-		}
-
-
-		@font-face {
-			font-family: 'HKGrotesk-Light';
-			src: url('webfonts/HKGrotesk-Light.woff') format('woff');
-
-		}
-
-		@font-face {
-			font-family: 'HKGrotesk-Medium';
-			src: url('webfonts/HKGrotesk-Medium.woff') format('woff');
-
-		}
-
-		@font-face {
-			font-family: 'HKGrotesk-Regular';
-			src: url('webfonts/HKGrotesk-Regular.woff') format('woff');
-
-		}
+        font-family: 'FREAKGrotesk-next';
+        src: url('webfonts/FREAKGrotesk-next.ttf') format('truetype'),
+        url('webfonts/FREAKGrotesk-next.eot'),
+        url('webfonts/FREAKGrotesk-next.woff') format('woff');
+    }
 
 
-		body {
-			width: auto;
-			margin:0; 
-			padding:0; 
-			background: #1d1f21;
-			font-family: "HKGrotesk-Light";
-			font-size:.7em;
-		}
+    @font-face {
+        font-family: 'HKGrotesk-Light';
+        src: url('webfonts/HKGrotesk-Light.woff') format('woff');
+    }
 
-		#info {
-			font-size:.6rem;
-			position: absolute;
-			left:1rem;
-			bottom:1rem;
-			color: #ddd;
-			padding:0;
-			margin:0;
-		}
+    @font-face {
+        font-family: 'HKGrotesk-Medium';
+        src: url('webfonts/HKGrotesk-Medium.woff') format('woff');
+    }
 
-		.domain{
-			stroke:rgb(100,100,100);
-		}
-		
-		.tick line{
-			stroke:rgb(100,100,100);
-		}
-		.tick text {
-			font-family: "HKGrotesk-Light";
-			fill:rgb(255,255,255);
-		}
-
-		.axisSvg {
-			position: fixed;
-			height: 32px;
-			background-color: #1d1f21;
-			top: 0;
-			width: 100%;
-			pointer-events:none;
-
-		}
-
-		svg {
-			overflow-x: scroll;
-			margin: 0;
-			padding: 0;
-		}
-
-		#info {
-			position: fixed;	
-			bottom: 0;
-		}
-
-		rect {
-			cursor: pointer;
-		}
-
-		#select {
-			position: fixed;
-			right: 1rem;
-			top: 1rem;
-			z-index:2;
-			padding: 5px 8px;
-    	
-   			 border: none;
-   			 box-shadow: none;
-    background-color: white;
-    background-image: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-		}
+    @font-face {
+        font-family: 'HKGrotesk-Regular';
+        src: url('webfonts/HKGrotesk-Regular.woff') format('woff');
+    }
 
 
-	</style>
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: #1d1f21;
+        font-family: "HKGrotesk-Light";
+        font-size: .7em;
+    }
+	h1{
+		font-family: "FREAKGrotesk-next";
+    font-size: 3em;
+    line-height: 0em;
+    margin-top: 1.9em;
+	}
+    #info {
+        font-size: .6rem;
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+
+    .domain {
+        stroke: rgb(100, 100, 100);
+    }
+
+    .tick line {
+        stroke: rgb(100, 100, 100);
+    }
+
+    .tick text {
+        font-family: "HKGrotesk-Light";
+        fill: rgb(255, 255, 255);
+    }
+
+    .axisSvg {
+        position: fixed;
+        height: 32px;
+        background-color: #1d1f21;
+        top: 0;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    svg {
+        overflow-x: scroll;
+        margin: 0;
+        padding: 0;
+    }
+
+    #info {
+        position: fixed;
+        bottom: 0;
+    }
+
+    rect {
+        cursor: pointer;
+    }
+
+    #select {
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        z-index: 2;
+        padding: 5px 8px 6px 8px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background-color: white;
+        background-image: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-family: "HKGrotesk-Medium";
+    }
+    select:focus {
+        outline: none;
+    }
+
+    #legenda ul{
+		list-style-type: none;
+		padding: 0;
+    }
+	#legenda li{
+		line-height: 23px;
+		font-size: 1.1em;
+	}
+    #legenda span{
+    		padding-right: 12px;
+    		margin-right: 10px; 
+    }
+    .color_comunicazione{
+    	    background-color: #ffd700;
+    }
+    .color_strumenti{
+    	    background-color: #12c8bb;
+    }
+    .color_processi{
+    	    background-color: #dc64d7;
+    }
+    #legenda span.color_legenda{
+    	background-color: white;
+    	padding: 3px 2px;
+    }
+	.last{
+		margin-bottom: 25px;
+	}
+	#legenda span.parentesi_quadra{
+		border: white;
+    	border-top: solid 1px;
+    	border-bottom: solid 1px;
+    	border-right: solid 1px;
+    	padding: 2px 2px;
+	}
+    
+        </style>
 </head>
 
 <body>
+    <svg width="100%">
+    </svg>
+    <div id="info">
+    <!-- Legenda -->
+		<div id="legenda">
+		<ul>
+		<li><span class="color_comunicazione"></span> X_Comunicazione</li>
+		<li><span class="color_strumenti"></span>Y_Strumenti</li>
+		<li class="last"><span class="color_processi"></span>Z_Processi</li>
+		<li><span class="color_legenda"></span>1 INCONTRO = 1 GIORNO</li>
+		<li><span class="color_legenda"></span><span class="parentesi_quadra"></span>ALTEZZA = N° ISCRITTI</li>
+		</ul>
+		</div>
+        <h1>Calendario corsi SOS</h1>
+        <!-- <p>L'altezza delle barre rappresenta il numero di iscritti mentre la larghezza la durata di ogni appuntamento.</p> -->
+    </div>
+    <select id="select"></select>
+    <script src="https://d3js.org/d3.v4.min.js">
+    </script>
+    <script>
+    var topMargin = 50;
+    var padding = 20;
+    var timeScale = d3.scaleTime();
+    // aggiungiamo l'asse temporale
+    var axis = d3.axisTop(timeScale) //.ticks(d3.timeDay);
+    var axisSvg;
+    var dayWidth;
 
+    var barHeightScale = d3.scaleLinear().domain([0, 100])
 
-	<svg width="100%" >
-	</svg>
+    // TODO calcolare l'altezza massima
+    barHeightScale.range([1, 100])
 
-	<div id="info">
-		<h1>Calendario corsi SOS</h1>
-		<p>L'altezza delle barre rappresenta il numero di iscritti mentre la larghezza la durata di ogni appuntamento.</p>
-	</div>
+    var totalHeight;
 
-	<select id="select"></select>
-	<script src="https://d3js.org/d3.v4.min.js"> </script>	
-	<script>
+    var margin = window.innerHeight * .05;
 
-		var topMargin = 50;
-		var padding = 20;
-		var timeScale = d3.scaleTime();
-		// aggiungiamo l'asse temporale
-		var axis = d3.axisTop(timeScale)//.ticks(d3.timeDay);
-		var axisSvg;
-		var dayWidth;
+    var svg = d3.select("svg");
+    var data;
 
-		var barHeightScale = d3.scaleLinear().domain([0,100])
+    var colours = {
+        x_comunicazione: "#ffd700",
+        y_strumenti: "#12c8bb",
+        z_processi: "#dc64d7"
+    }
 
-		// TODO calcolare l'altezza massima
-		barHeightScale.range([1, 100])
 
-		var totalHeight;
+    var opzioni = ["tutti"].concat(Object.keys(colours))
 
-		var margin = window.innerHeight*.05;
+    var selectElement = d3.select("#select")
 
-		var svg = d3.select("svg");
-		var data;
+    selectElement
+        .selectAll("option")
+        .data(opzioni)
+        .enter()
+        .append("option")
+        .property("value", function(d, i) {
+            return d
+        })
+        .html(function(d, i) {
+            return d
+        })
 
-		var colours  = {
-			x_comunicazione:"#FBFF3E", 
-			y_strumenti: "#47D5FF", 
-			z_processi: "#B03DFF"
-		}
 
-		
-		var opzioni = Object.keys(colours);
-		opzioni.push("tutti");
 
-		var selectElement = d3.select("#select")
-		
-		selectElement
-		.selectAll("option")
-		.data(opzioni)
-		.enter()
-		.append("option")
-		.attr("value", function(d,i){
-			return d
-		})
-		.html(function(d,i){
-			return d
-		})
+    selectElement.node().onchange = function(d) {
 
+        filterData(d.target.value)
+    }
+    // .on("change", function(d){
+    // })
 
+    d3.json("data.json", start)
 
-		selectElement.node().onchange = function(d) {
+    function start(loadedData) {
 
-			filterData(d.target.value)
-		}
-		// .on("change", function(d){
-		// })
 
-		d3.json("data.json", start)
+        // puliamo i dati
+        data = loadedData;
 
-		function start(loadedData) {
 
+        totalHeight = topMargin;
 
-			// puliamo i dati
-			data = loadedData;
+        data.forEach(function(d) {
+            totalHeight += barHeightScale(d.iscritti) + padding;
+            // impostiamo la data finale e di partenza
+            if (d.appuntamenti.length == 0) {
+                d.finalDate = new Date(d.date)
+            } else {
+                d.startDate = new Date(d.appuntamenti[0].appuntamento)
+                d.finalDate = new Date(d.appuntamenti[d.appuntamenti.length - 1].appuntamento)
+            }
+        })
 
+        data = data.filter(function(d) { return d.appuntamenti.length > 0 })
 
-			totalHeight = topMargin;
-			
-			data.forEach(function(d){
-				totalHeight += barHeightScale(d.iscritti) + padding;
-				// impostiamo la data finale e di partenza
-				if(d.appuntamenti.length == 0) {
-					d.finalDate = new Date(d.date)
-				} else {
-					d.startDate = new Date(d.appuntamenti[0].appuntamento)
-					d.finalDate = new Date(d.appuntamenti[d.appuntamenti.length-1].appuntamento)
-				}
-			})
 
-			data = data.filter(function(d){ return d.appuntamenti.length >0})
+        data.sort(function(a, b) {
+            return a.startDate - b.startDate;
+        })
 
+        // ridimensionamo l'svg 
+        svg.attr("height", totalHeight)
 
-			data.sort(function(a,b) {
-				return a.startDate - b.startDate;
-			})
 
-			// ridimensionamo l'svg 
-			svg.attr("height", totalHeight)
+        axisSvg = d3.select(document.body).append("svg").attr("class", "axisSvg")
 
 
-			axisSvg = d3.select(document.body).append("svg").attr("class", "axisSvg")
+        axisSvg
+            .append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0,30)")
 
 
-			axisSvg
-			.append("g")
-			.attr("class", "axis")
-			.attr("transform", "translate(0,30)")
+        // ridisegna on resize
+        window.onresize = function() {
+            render(currentData);
+        }
 
+        var dateDomain = d3.extent(data, function(d, i) {
+            return d.finalDate
+        })
 
-			// ridisegna on resize
-			window.onresize =  function() {
-				render(currentData);
-			}
 
-			var dateDomain = d3.extent(data, function(d,i) {
-				return d.finalDate
-			})
 
+        timeScale.domain([new Date(data[0].startDate), new Date(dateDomain[1])])
 
 
-			timeScale.domain([new Date(data[0].startDate), new Date(dateDomain[1])])
+        currentData = data;
 
+        // TODO disegna due volte perche la prima aggiunge e la seconda riposiziona
+        render(currentData)
+        render(currentData)
 
-			currentData = data;
+    }
 
-			// TODO disegna due volte perche la prima aggiunge e la seconda riposiziona
-			render(currentData)
-			render(currentData)
 
-		}
+    function filterData(area) {
+        if (area == "tutti") {
+            currentData = data
+        } else {
+            currentData = data.filter(function(d) {
+                return d.area_tema == area
+            })
+        }
 
+        render(currentData)
 
-		function filterData(area) {
-			if(area == "tutti") {
-				currentData = data
-			} else {
-				currentData = data.filter(function(d) {
-					return d.area_tema == area
-				}) 
-			}
+    }
 
-			render(currentData)
 
-		}
+    function render(data) {
 
+        var ypos = topMargin;
+        var wWidth = window.innerWidth;
+        var wHeight = 0;
 
-		function render(data){
 
-			var ypos = topMargin;
-			var wWidth = window.innerWidth;
-			var wHeight = 0;
+        timeScale.range([wWidth * .02, wWidth * .8])
+        dayWidth = (timeScale(new Date("2017-01-15")) - timeScale.range()[0]) * .7;
 
-			
-			timeScale.range([wWidth*.02, wWidth*.8])
-			dayWidth = (timeScale(new Date("2017-01-15"))-timeScale.range()[0] )* .7;
+        // ridisegna asse temporale
+        axisSvg
+            .select(".axis")
+            .call(axis);
 
-			// ridisegna asse temporale
-			axisSvg
-			.select(".axis")
-			.call(axis);
 
+        var groups = svg
+            .selectAll(".appuntamenti")
+            .data(data, function(d, i) {
+                return d.title
+            })
 
-			var groups = svg
-			.selectAll(".appuntamenti")
-			.data(data, function(d,i){
-				return d.title
-			})
-			
 
-			groups
-			.transition()
-			.duration(800)
-			.style("transform", function(d, i){
-				var myPos = "translate(0, "+ Math.round(ypos) +"px)";
-				ypos += barHeightScale(d.iscritti) + padding;
-				return myPos;
-			})
+        groups
+            .transition()
+            .duration(800)
+            .style("transform", function(d, i) {
+                var myPos = "translate(0, " + Math.round(ypos) + "px)";
+                ypos += barHeightScale(d.iscritti) + padding;
+                return myPos;
+            })
 
 
-			var enteringGrooups = groups
-			.enter()
-			.append("g")
-			.attr("class", "appuntamenti")
-			.each(function(course) {
-				var tema = course.area_tema;
+        var enteringGrooups = groups
+            .enter()
+            .append("g")
+            .attr("class", "appuntamenti")
+            .each(function(course) {
+                var tema = course.area_tema;
 
-				var foreignObject = d3.select(this)
-				.append('foreignObject')
-				.attr("x", Math.round(timeScale(course.finalDate) + 10))
+                var foreignObject = d3.select(this)
+                    .append('foreignObject')
+                    .attr("x", Math.round(timeScale(course.finalDate) + 10))
 
-				var xhtml = foreignObject
-				.append('xhtml:div')
+                var xhtml = foreignObject
+                    .append('xhtml:div')
 
-				var div = xhtml.append('div')
+                var div = xhtml.append('div')
 
-				div.style('width', 200)
-				div.style('color', colours[tema])
+                div.style('width', 200)
+                div.style('color', colours[tema])
 
-				div.attr({
-					'class': 'text'
-				})
+                div.attr({
+                    'class': 'text'
+                })
 
-				div.html(course.title)
+                div.html(course.title)
 
-				d3.select(this)
-				.selectAll("rect")
-				.data(course.appuntamenti)
-				.enter()
-				.append("rect")
-				.each(function(d,i){
-					d.iscritti = course.iscritti
-				})
-				.style("fill", colours[tema])
-				.on("mouseover", function(d){
+                d3.select(this)
+                    .selectAll("rect")
+                    .data(course.appuntamenti)
+                    .enter()
+                    .append("rect")
+                    .each(function(d, i) {
+                        d.iscritti = course.iscritti
+                    })
+                    .style("fill", colours[tema])
+                    .on("mouseover", function(d) {
 
-					console.log("appuntamento "+ d.appuntamento, "inizio "+ d.inizio, "fine "+ d.fine, "iscritti "+ d.iscritti)
-				})
-			})
+                        console.log("appuntamento " + d.appuntamento, "inizio " + d.inizio, "fine " + d.fine, "iscritti " + d.iscritti)
+                    })
+            })
 
 
-			groups
-			.exit()
-			.transition()
-			.style("opacity",0)
-			// .remove()
+        groups
+            .exit()
+            .transition()
+            .style("opacity", 0)
+        // .remove()
 
-			groups
-			.selectAll("foreignObject")
-			.attr("x", function(d){return Math.round(timeScale(d.finalDate) + 10)})
+        groups
+            .selectAll("foreignObject")
+            .attr("x", function(d) { return Math.round(timeScale(d.finalDate) + 10) })
 
-			groups
-			.selectAll("rect")
-			.attr("x", function(d, i) {
-				return timeScale(new Date(d.appuntamento));
-			})
-			.attr("height", function(d,i) {
-				return barHeightScale(d.iscritti)
-			})
-			.attr("width", dayWidth)
+        groups
+            .selectAll("rect")
+            .attr("x", function(d, i) {
+                return timeScale(new Date(d.appuntamento));
+            })
+            .attr("height", function(d, i) {
+                return barHeightScale(d.iscritti)
+            })
+            .attr("width", dayWidth)
 
-			// //totalHeight = data.length * (barHeightScale.range()[1] + padding) + 100
-			// svg.attr("height", ypos + (window.innerHeight * 0.4))
-			
-			
-			groups
-			.style("opacity",1)
+        // //totalHeight = data.length * (barHeightScale.range()[1] + padding) + 100
+        // svg.attr("height", ypos + (window.innerHeight * 0.4))
 
 
-		}
-	</script>
+        groups
+            .style("opacity", 1)
 
+
+    }
+    </script>
 </body>
 
 </html>
